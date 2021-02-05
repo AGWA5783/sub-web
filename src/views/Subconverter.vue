@@ -36,7 +36,7 @@
                     style="width: 100%"
                     v-model="form.customBackend"
                     :fetch-suggestions="backendSearch"
-                    placeholder="动动小手，（建议）自行搭建后端服务。例：http://127.0.0.1:25500/sub?"
+                    placeholder="动动小手，（建议）自行搭建后端服务。例：https://api.sublink.dev/sub?"
                   >
                     <el-button slot="append" @click="gotoGayhub" icon="el-icon-link">前往项目仓库</el-button>
                   </el-autocomplete>
@@ -107,7 +107,7 @@
                         <el-checkbox v-model="form.tpl.clash.doh" label="Clash.DoH"></el-checkbox>
                       </el-row>
                       <el-row>
-                        <el-checkbox v-model="form.insert" label="网易云"></el-checkbox>
+                        <el-checkbox v-model="form.insert" label="网易云解锁"></el-checkbox>
                       </el-row>
                       <el-button slot="reference">定制功能</el-button>
                     </el-popover>
@@ -241,84 +241,74 @@ export default {
       options: {
         clientTypes: {
           Clash: "clash",
+          ClashR: "clashr",
+          Surge2: "surge&ver=2",
           Surge3: "surge&ver=3",
           Surge4: "surge&ver=4",
+          Loon: "loon",
           Quantumult: "quan",
           QuantumultX: "quanx",
           Surfboard: "surfboard",
-          Loon: "loon",
           SSAndroid: "sssub",
           V2Ray: "v2ray",
-          ss: "ss",
-          ssr: "ssr",
-          ssd: "ssd",
-          ClashR: "clashr",
-          Surge2: "surge&ver=2",
+          SS: "ss",
+          SSR: "ssr",
+          SSD: "ssd",
         },
-        backendOptions: [{ value: "http://127.0.0.1:25500/sub?" }],
+        backendOptions: [{ value: "https://api.sublink.dev/sub?" }],
         remoteConfig: [
           {
-            label: "universal",
+            label: "Universal",
             options: [
               {
                 label: "No-Urltest",
                 value:
-                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/universal/no-urltest.ini"
+                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/universal/no-urltest.ini"
               },
               {
                 label: "Urltest",
                 value:
-                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/universal/urltest.ini"
+                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/universal/urltest.ini"
               }
             ]
           },
           {
-            label: "customized",
+            label: "Customized",
             options: [
-              {
-                label: "Maying",
-                value:
-                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/customized/maying.ini"
-              },
               {
                 label: "rixCloud",
                 value:
-                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/customized/rixcloud.ini"
+                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/customized/rixcloud.ini"
               },
               {
-                label: "YoYu",
+                label: "Maying",
                 value:
-                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/customized/yoyu.ini"
+                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/customized/maying.ini"
               },
               {
-                label: "Ytoo",
+                label: "w8ves",
                 value:
-                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/customized/ytoo.ini"
+                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/customized/yoyu.ini"
+              },
+              {
+                label: "YToo",
+                value:
+                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/customized/ytoo.ini"
               },
               {
                 label: "NyanCAT",
                 value:
-                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/customized/nyancat.ini"
-              },
-              {
-                label: "Nexitally",
-                value:
-                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/customized/nexitally.ini"
+                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/customized/nyancat.ini"
               },
               {
                 label: "SoCloud",
                 value:
-                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/customized/socloud.ini"
+                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/customized/socloud.ini"
               },
               {
-                label: "ARK",
+                label: "便利店",
                 value:
-                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/customized/ark.ini"
-              },
-              {
-                label: "ssrCloud",
-                value:
-                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/customized/ssrcloud.ini"
+                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/customized/convenience.ini"
               }
             ]
           },
@@ -328,12 +318,12 @@ export default {
               {
                 label: "NeteaseUnblock(仅规则，No-Urltest)",
                 value:
-                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/special/netease.ini"
+                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/special/netease.ini"
               },
               {
-                label: "Basic(仅GEOIP CN + Final)",
+                label: "PharosPro(仅规则，No-Urltest)",
                 value:
-                  "https://subconverter.oss-ap-southeast-1.aliyuncs.com/Rules/RemoteConfig/special/basic.ini"
+                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/special/phaors.ini"
               }
             ]
           }
@@ -393,7 +383,7 @@ export default {
     }
   },
   mounted() {
-    this.form.clientType = "clash";
+    this.form.clientType = "surge&ver=4";
     this.notify();
     this.getBackendVersion();
   },
