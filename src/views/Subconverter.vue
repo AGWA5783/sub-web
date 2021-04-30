@@ -276,9 +276,9 @@ export default {
             label: "Customized",
             options: [
               {
-                label: "rixCloud",
+                label: "Flower",
                 value:
-                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/customized/rixcloud.ini"
+                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/customized/flower.ini"
               },
               {
                 label: "Maying",
