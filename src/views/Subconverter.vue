@@ -263,12 +263,12 @@ export default {
               {
                 label: "No-Urltest",
                 value:
-                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/universal/no-urltest.ini"
+                  "https://subweb.s3.fr-par.scw.cloud/RemoteConfig/universal/no-urltest.ini"
               },
               {
                 label: "Urltest",
                 value:
-                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/universal/urltest.ini"
+                  "https://subweb.s3.fr-par.scw.cloud/RemoteConfig/universal/urltest.ini"
               }
             ]
           },
@@ -278,37 +278,27 @@ export default {
               {
                 label: "Flower",
                 value:
-                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/customized/flower.ini"
+                  "https://subweb.s3.fr-par.scw.cloud/RemoteConfig/customized/flower.ini"
               },
               {
                 label: "Maying",
                 value:
-                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/customized/maying.ini"
-              },
-              {
-                label: "w8ves",
-                value:
-                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/customized/yoyu.ini"
+                  "https://subweb.s3.fr-par.scw.cloud/RemoteConfig/customized/maying.ini"
               },
               {
                 label: "YToo",
                 value:
-                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/customized/ytoo.ini"
-              },
-              {
-                label: "NyanCAT",
-                value:
-                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/customized/nyancat.ini"
+                  "https://subweb.s3.fr-par.scw.cloud/RemoteConfig/customized/ytoo.ini"
               },
               {
                 label: "SoCloud",
                 value:
-                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/customized/socloud.ini"
+                  "https://subweb.s3.fr-par.scw.cloud/RemoteConfig/customized/socloud.ini"
               },
               {
-                label: "便利店",
+                label: "LinkCube",
                 value:
-                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/customized/convenience.ini"
+                  "https://subweb.s3.fr-par.scw.cloud/RemoteConfig/customized/convenience.ini"
               }
             ]
           },
@@ -318,12 +308,12 @@ export default {
               {
                 label: "NeteaseUnblock(仅规则，No-Urltest)",
                 value:
-                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/special/netease.ini"
+                  "https://subweb.s3.fr-par.scw.cloud/RemoteConfig/special/netease.ini"
               },
               {
                 label: "PharosPro(仅规则，No-Urltest)",
                 value:
-                  "https://subweb.oss-cn-hongkong.aliyuncs.com/RemoteConfig/special/phaors.ini"
+                  "https://subweb.s3.fr-par.scw.cloud/RemoteConfig/special/phaors.ini"
               }
             ]
           }
