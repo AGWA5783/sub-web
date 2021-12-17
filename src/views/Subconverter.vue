@@ -20,7 +20,7 @@
                   v-model="form.sourceSubUrl"
                   type="textarea"
                   rows="3"
-                  placeholder="支持订阅或ss/ssr/vmess链接，多个链接每行一个或用 | 分隔"
+                  placeholder="支持订阅或ss/ssr/vmess/trojan链接，多个链接每行一个或用 | 分隔"
                   @blur="saveSubUrl"
                 />
               </el-form-item>
