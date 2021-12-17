@@ -466,8 +466,6 @@ export default {
           this.form.nodeList.toString() +
           "&tfo=" +
           this.form.tfo.toString() +
-          "&scv=" +
-          this.form.scv.toString() +
           "&fdn=" +
           this.form.fdn.toString() +
           "&sort=" +
