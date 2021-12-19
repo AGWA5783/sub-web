@@ -276,24 +276,19 @@ export default {
             label: "Customized",
             options: [
               {
-                label: "Flower",
+                label: "Nexitally",
+                value:
+                  "https://subweb.s3.fr-par.scw.cloud/RemoteConfig/customized/nexitally.ini"
+              },
+              {
+                label: "FlowerCloud",
                 value:
                   "https://subweb.s3.fr-par.scw.cloud/RemoteConfig/customized/flower.ini"
               },
               {
-                label: "Maying",
-                value:
-                  "https://subweb.s3.fr-par.scw.cloud/RemoteConfig/customized/maying.ini"
-              },
-              {
-                label: "YToo",
+                label: "YTOO",
                 value:
                   "https://subweb.s3.fr-par.scw.cloud/RemoteConfig/customized/ytoo.ini"
-              },
-              {
-                label: "SoCloud",
-                value:
-                  "https://subweb.s3.fr-par.scw.cloud/RemoteConfig/customized/socloud.ini"
               },
               {
                 label: "LinkCube",
@@ -333,6 +328,7 @@ export default {
         sort: false,
         udp: false,
         tfo: false,
+        scv: false,
         fdn: false,
         appendType: false,
         insert: false, // 是否插入默认订阅的节点，对应配置项 insert_url
@@ -466,6 +462,8 @@ export default {
           this.form.nodeList.toString() +
           "&tfo=" +
           this.form.tfo.toString() +
+          "&scv=" +
+          this.form.scv.toString() +
           "&fdn=" +
           this.form.fdn.toString() +
           "&sort=" +
